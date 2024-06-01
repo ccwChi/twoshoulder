@@ -1,15 +1,16 @@
-import React from 'react'
-import Header from '../../components/Header'
-import TitleBar from '../../components/TitleBar'
+import React from "react";
+import Header from "../../components/Header";
+import TitleBar from "../../components/TitleBar";
+import { motion } from "framer-motion";
+import PageTrasition from "../../components/PageTrasition";
 
 const Home = () => {
   return (
-    <>
-     <Header />
-       {/* TitleBar h-14 */}
+    <PageTrasition>
+      <Header />
       <TitleBar title={""} />
-    </>
-  )
-}
+    </PageTrasition>
+  );
+};
 
-export default Home
+export default Home;

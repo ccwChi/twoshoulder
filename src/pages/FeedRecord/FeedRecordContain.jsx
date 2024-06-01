@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import ArrowDown from "../../asset/icons/ArrowDown";
 import ArrowUp from "../../asset/icons/ArrowUp";
 import Pen from "../../asset/icons/Pen";
@@ -35,8 +36,9 @@ const FeedRecordContain = () => {
 
         {/* 記錄框 */}
         {feedRecordData.map((data, i) => (
-          <div
+          <NavLink
             key={i}
+            to="detail"
             className="relative w-2/3 aspect-[6/5] bg-[#FF8787] rounded-3xl p-4 cursor-pointer
                             shadow-[5px_5px_20px_5px_rgba(0,0,0,0.3)] flex flex-col"
           >
@@ -46,7 +48,7 @@ const FeedRecordContain = () => {
               {data.title}
             </p>
             <p className="text-white font-medium text-lg">{data.describe}</p>
-          </div>
+          </NavLink>
         ))}
       </div>
     </div>

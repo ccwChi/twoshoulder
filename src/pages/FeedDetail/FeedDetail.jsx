@@ -12,20 +12,19 @@ import FeedModal from "./FeedModal";
 import Plus from "../../asset/icons/Plus";
 import Button from "../../components/Button";
 import { recordDetailData } from "./data";
+import { motion } from "framer-motion";
+import HomeButton from "../../components/HomeButton";
+import PageTrasition from "../../components/PageTrasition";
 
 const FeedDetail = () => {
   return (
-    <>
+    <PageTrasition>
       <Header />
       <TitleBar title={"01 白蝦池"} />
       <DateSelectBar />
       <FeedDetailContain />
-      <div className="h-12 relative w-full">
-        <div className="bg-[#3CACA5] rounded-full w-14 h-14 right-4 bottom-2 absolute flex justify-center items-center cursor-pointer z-20">
-          <Home className="w-10 h-10 text-white" />
-        </div>
-      </div>
-    </>
+      <HomeButton />
+    </PageTrasition>
   );
 };
 

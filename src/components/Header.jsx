@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import AngleLeft from "../asset/icons/AngleLeft";
 import ArrowRight from "../asset/icons/ArrowRight";
 import Bell from "../asset/icons/Bell";
@@ -5,9 +6,9 @@ import Bell from "../asset/icons/Bell";
 const Header = () => {
   return (
     <div className="bg-[#3CACA5] w-full h-14 flex items-center justify-between">
-      <div className="ps-2 ">
+      <NavLink className="ps-2 " to={"/"}>
         <AngleLeft className="w-9 h-9 text-white cursor-pointer"/>
-      </div>
+      </NavLink>
       <div className="flex gap-x-6 pe-2">
         <div className="relative">
           <Bell className="w-9 h-9 text-white cursor-pointer"/>

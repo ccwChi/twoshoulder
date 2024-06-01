@@ -18,16 +18,28 @@ const FeedModal = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
+  const [currentPage, setCurrentPage] = useState(page);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (showModal) {
       setShouldRender(true);
-      setTimeout(() => setIsVisible(true), 10); // Add a slight delay to trigger the animation
+      setTimeout(() => setIsVisible(true), 10);
     } else {
       setIsVisible(false);
-      setTimeout(() => setShouldRender(false), 300); // Match the duration of the animation
+      setTimeout(() => setShouldRender(false), 300);
     }
   }, [showModal]);
+
+  useEffect(() => {
+    if (page !== currentPage) {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentPage(page);
+        setIsAnimating(false);
+      }, 150); // Match the duration of the animation
+    }
+  }, [page]);
 
   return (
     <div>
@@ -49,19 +61,21 @@ const FeedModal = ({
                 e.stopPropagation();
               }}
             >
-              {page === 1 && (
-                <ModalPageOne
-                  deliverInfo={deliverInfo}
-                  setPage={setPage}
-                  setSelectedItem={setSelectedItem}
-                />
-              )}
-              {page === 2 && (
-                <ModalPageTwo
-                  deliverInfo={deliverInfo}
-                  selectedItem={selectedItem}
-                />
-              )}
+              <div className={`relative flex flex-col h-full transition-opacity duration-300 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+                {currentPage === 1 && (
+                  <ModalPageOne
+                    deliverInfo={deliverInfo}
+                    setPage={setPage}
+                    setSelectedItem={setSelectedItem}
+                  />
+                )}
+                {currentPage === 2 && (
+                  <ModalPageTwo
+                    deliverInfo={deliverInfo}
+                    selectedItem={selectedItem}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>

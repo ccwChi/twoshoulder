@@ -3,7 +3,7 @@ import Search from "../asset/icons/Search";
 
 const SearchBar = () => {
   return (
-    <div className="relative h-14 w-full flex justify-end px-3 mt-2 items-center">
+    <div className="relative h-14 w-full flex justify-end px-3 items-center">
       <input
         type="search"
         className="h-10  bg-white font-semibold rounded-full 

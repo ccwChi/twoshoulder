@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import AngleLeft from "../../asset/icons/AngleLeft";
-import AngleRight from "../../asset/icons/AngleRight";
-import Button from "../../components/Button";
 import { SwiperSlide, Swiper } from "swiper/react";
-import TrashBin from "../../asset/icons/TrashBin";
-import { modalPageOneData, modalPageTwoData } from "./data";
+import AngleLeft from "../asset/icons/AngleLeft";
+import AngleRight from "../asset/icons/AngleRight";
+import { modalPageOneData, modalPageTwoData } from "../pages/data";
+import Button from "./Button";
+import TrashBin from "../asset/icons/TrashBin";
+
 
 const FeedModal = ({
   showModal,
-  setShowModal,
   deliverInfo,
   toggleModal,
   page,
@@ -18,7 +18,7 @@ const FeedModal = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
-  const [currentPage, setCurrentPage] = useState(page);
+  const [currentPage, setCurrentPage] = useState(page || "1");
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -120,9 +120,9 @@ const ModalPageOne = ({ deliverInfo, setPage, setSelectedItem }) => {
           ))}
         </div>
       </div>
-      <div className="h-14 flex justify-end px-14 items-center">
+      <div className="h-20 flex justify-end px-14 items-center">
         <Button className="bg-[#213E40] h-9">
-          <p className="text-white text-lg py-1">確定</p>
+          <p className="text-gray-400 text-lg py-1">確定</p>
         </Button>
       </div>
     </div>
@@ -149,7 +149,7 @@ const SwiperSlideWrapper = ({ data, setPage, setSelectedItem }) => {
           }
         }}
         className="relative w-full rounded-lg p-4 cursor-pointer h-full
-        shadow-[0px_0px_1px_1px_rgba(0,0,0,0.3)] flex flex-col"
+        border border-gray-800 flex flex-col"
       >
         <SwiperSlide className="block w-full h-full ">
           <div className="flex w-full h-full flex-col">
@@ -210,7 +210,7 @@ const ModalPageTwo = ({ deliverInfo, selectedItem }) => {
       </div>
       <div className="flex gap-x-3 p-4">
         <Button
-          className={`w-full ${
+          className={`w-full px-0 ${
             activeButton === "feed" ? "bg-[#213E40]" : "bg-[#E3EAF2]"
           }`}
           onClick={() => handleButtonClick("feed")}
@@ -220,7 +220,7 @@ const ModalPageTwo = ({ deliverInfo, selectedItem }) => {
           </p>
         </Button>
         <Button
-          className={`w-full ${
+          className={`w-full px-0 ${
             activeButton === "supplements" ? "bg-[#213E40]" : "bg-[#E3EAF2]"
           }`}
           onClick={() => handleButtonClick("supplements")}
@@ -230,7 +230,7 @@ const ModalPageTwo = ({ deliverInfo, selectedItem }) => {
           </p>
         </Button>
         <Button
-          className={`w-full ${
+          className={`w-full px-0 ${
             activeButton === "medicine" ? "bg-[#213E40]" : "bg-[#E3EAF2]"
           }`}
           onClick={() => handleButtonClick("medicine")}
@@ -240,7 +240,7 @@ const ModalPageTwo = ({ deliverInfo, selectedItem }) => {
           </p>
         </Button>
         <Button
-          className={`w-full ${
+          className={`w-full px-0 ${
             activeButton === "additives" ? "bg-[#213E40]" : "bg-[#E3EAF2]"
           }`}
           onClick={() => handleButtonClick("additives")}
@@ -255,7 +255,7 @@ const ModalPageTwo = ({ deliverInfo, selectedItem }) => {
           {modalPageTwoData.map((data, i) => (
             <div className="flex w-full gap-x-2 p-4" key={"selectItem" + i}>
               <button
-                className={`h-10 flex-grow-[1] rounded-full text-sm px-4 py-2.5 inline-flex justify-center items-center text-gray-400 ${
+                className={`h-10 w-full rounded-full text-sm px-4 py-2.5 inline-flex justify-center items-center text-gray-400 ${
                   selectedButton === i &&
                   "bg-[#213E40]   shadow-[2px_3px_2px_0px_rgba(0,0,0,0.2)]"
                 }`}

@@ -10,13 +10,13 @@ const DropdownButton = ({ selectedOption, setSelectedOption }) => {
     setIsOpen(!isOpen);
   };
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    setIsOpen(false);
-  };
+  // const handleOptionClick = (option) => {
+  //   setSelectedOption(option);
+  //   setIsOpen(false);
+  // };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left ">
       <button
         onClick={toggleDropdown}
         className="h-10  bg-white rounded-full 

@@ -2,20 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-input::placeholder {
-  font-weight: bold;
-  opacity: 0.5;
-  color: rgb(168, 168, 168);
+
+
+body {
+  background-color: #dee7ee;
+  overflow: hidden; 
 }
 
-@layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
+input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: rgb(168, 168, 168);
   }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  
+  @layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
-}

@@ -81,4 +81,27 @@ const recordDetailData = [
     {title:"飼料10號"},
   ]
 
-  export {recordDetailData, modalPageOneData,modalPageTwoData}
+
+  const feedRecordData = [
+    {
+      number: "01",
+      title: "白蝦池",
+      describe: "第 4 批次",
+    },
+    {
+      number: "03",
+      title: "龍膽石斑魚池",
+      describe: "第 3 批次",
+    },
+    {
+      number: "04",
+      title: "白蝦池",
+      describe: "第 4 批次",
+    },
+    {
+      number: "05",
+      title: "白蝦池",
+      describe: "第 4 批次",
+    },
+  ];
+  export {recordDetailData, modalPageOneData,modalPageTwoData, feedRecordData}

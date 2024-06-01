@@ -1,6 +1,6 @@
-
-import FeedRecord from "./pages/FeedRecord";
-import FeedDetail from "./pages/FeedDetail";
+import FeedDetail from "./pages/FeedDetail/FeedDetail";
+import FeedRecord from "./pages/FeedRecord/FeedRecord";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <div className="container h-full flex flex-col w-full  items-center overflow-y-hidden">
         <FeedDetail />
         {/* <FeedRecord /> */}
+        {/* <Home /> */}
       </div>
     </div>
   );

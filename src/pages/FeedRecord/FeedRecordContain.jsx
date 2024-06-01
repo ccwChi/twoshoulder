@@ -1,7 +1,6 @@
-import React from "react";
-import ArrowUp from "../asset/icons/ArrowUp";
-import ArrowDown from "../asset/icons/ArrowDown";
-import Pen from "../asset/icons/Pen";
+import ArrowDown from "../../asset/icons/ArrowDown";
+import ArrowUp from "../../asset/icons/ArrowUp";
+import Pen from "../../asset/icons/Pen";
 
 const FeedRecordContain = () => {
   const feedRecordData = [
@@ -31,7 +30,10 @@ const FeedRecordContain = () => {
     <div className="relative w-full flex flex-col flex-1 items-center overflow-hidden">
       <ArrowUp className="h-14 w-14 text-[#bed3d3] absolute top-3 right-0 cursor-pointer" />
       <ArrowDown className="h-14 w-14 text-[#bed3d3] absolute bottom-10 right-0 cursor-pointer" />
+      
       <div className="flex flex-wrap justify-center w-full  overflow-y-scroll no-scrollbar gap-y-8 py-6 ">
+
+        {/* 記錄框 */}
         {feedRecordData.map((data, i) => (
           <div
             key={i}

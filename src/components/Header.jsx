@@ -10,12 +10,12 @@ const Header = () => {
         <AngleLeft className="w-9 h-9 text-white cursor-pointer"/>
       </NavLink>
       <div className="flex gap-x-6 pe-2">
-        <div className="relative">
+        <NavLink className="relative" to={"/empty"}>
           <Bell className="w-9 h-9 text-white cursor-pointer"/>
           <div className="w-4 h-4 rounded-full absolute top-0 left-4 flex items-center justify-center bg-red-600">
             <p className="text-white text-[10px]">1</p>
           </div>
-        </div>
+        </NavLink>
         <ArrowRight className="w-9 h-9 text-white cursor-pointer"/>
         <div className="relative flex rounded-full items-center justify-center  bg-white w-9 h-9  overflow-hidden cursor-pointer">
           <p className="text-[14px] text-[#3CACA5] font-bold ">小明</p>

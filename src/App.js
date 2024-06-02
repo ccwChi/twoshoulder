@@ -15,9 +15,9 @@ const App = () => {
     <div className="h-screen w-screen flex flex-col  items-center overflow-hidden">
       <AnimatePresence initial={false}>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/detail" element={<FeedDetail />} />
-          <Route path="/record" element={<FeedRecord />} />
+          <Route path="/" element={<FeedRecord />} />
         </Routes>
       </AnimatePresence>
     </div>

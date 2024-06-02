@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 
-
 body {
   background-color: #dee7ee;
   overflow: hidden; 
+  font-family: 'Roboto', sans-serif;
 }
 
 input::placeholder {

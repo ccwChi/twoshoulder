@@ -56,7 +56,7 @@ const FeedModal = ({
             }}
           >
             <div
-              className="flex flex-col bg-[#D8E0EE] rounded-lg h-[85vh] shadow-[4px_4px_1px_0px_rgba(0,0,0,0.2)]"
+              className="flex flex-col bg-[#D8E0EE] rounded-lg h-[80vh] shadow-[4px_4px_1px_0px_rgba(0,0,0,0.2)]"
               onClick={(e) => {
                 e.stopPropagation();
               }}

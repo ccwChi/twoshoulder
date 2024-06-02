@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import AngleLeft from "../asset/icons/AngleLeft";
 import ArrowRight from "../asset/icons/ArrowRight";
 import Bell from "../asset/icons/Bell";
@@ -10,9 +10,9 @@ const Header = () => {
   return (
     <div className="bg-[#3CACA5] w-full h-14 flex items-center justify-between">
       {!isHome ? (
-        <NavLink className="ps-2" to={"/detail"}>
+        <div className="ps-2" >
           <AngleLeft className="w-9 h-9 text-white cursor-pointer" />
-        </NavLink>
+        </div>
       ) : (
         <div></div>
       )}

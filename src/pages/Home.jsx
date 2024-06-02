@@ -15,7 +15,7 @@ const Home = () => {
     setSelectedButton(index);
     setDirection("left");
     if (index === 3 || index === 4 || index === 5) {
-      navigate("/record");
+      navigate("/");
       setShowOverlay(true);
       setTimeout(() => setIsVisible(true), 0);
     }

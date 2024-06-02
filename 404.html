@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+      // 將當前路徑保存在 localStorage 中
+      var redirectTo = window.location.pathname;
+      localStorage.setItem('redirectTo', redirectTo);
+      // 重定向到根路徑
+      window.location.replace('/');
+    </script>
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

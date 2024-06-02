@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript">
-      // 將當前路徑保存在 localStorage 中
-      var redirectTo = window.location.pathname;
-      localStorage.setItem('redirectTo', redirectTo);
-      // 重定向到根路徑
-      window.location.replace('/twoshoulder');
-    </script>
-    <title>Page Not Found</title>
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/record" />
+  <script>
+    // JavaScript 重定向，保持路由
+    var pathname = window.location.pathname;
+    window.location.replace('/?' + pathname);
+  </script>
+  <title>Page Not Found</title>
+</head>
+<body>
+  <p>Page not found. Redirecting to homepage...</p>
+</body>
 </html>

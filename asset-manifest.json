@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/twoshoulder/static/css/main.2f4b2e5e.css",
-    "main.js": "/twoshoulder/static/js/main.285b515e.js",
+    "main.css": "/twoshoulder/static/css/main.07da568b.css",
+    "main.js": "/twoshoulder/static/js/main.1f94a163.js",
     "index.html": "/twoshoulder/index.html",
-    "main.2f4b2e5e.css.map": "/twoshoulder/static/css/main.2f4b2e5e.css.map",
-    "main.285b515e.js.map": "/twoshoulder/static/js/main.285b515e.js.map"
+    "main.07da568b.css.map": "/twoshoulder/static/css/main.07da568b.css.map",
+    "main.1f94a163.js.map": "/twoshoulder/static/js/main.1f94a163.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f4b2e5e.css",
-    "static/js/main.285b515e.js"
+    "static/css/main.07da568b.css",
+    "static/js/main.1f94a163.js"
   ]
 }
